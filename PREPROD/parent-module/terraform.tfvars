@@ -1,0 +1,69 @@
+rgs={
+    rg1={
+        name="mera_rg"
+        location="centralindia"
+    }
+}
+
+vnets={
+    vnet={
+    name="mera_vnet"
+    location="centralindia"
+    resource_group_name="mera_rg"
+    address_space=["10.0.0.0/16"]
+    }
+}
+
+subnets={
+    subnet1={
+        name="mera_subnet"
+        resource_group_name="mera_rg"
+        virtual_network_name="mera_vnet"
+        address_prefixes=["10.0.1.0/24"]
+    }
+    subnet2={
+        name="tera_subnet"
+        resource_group_name="mera_rg"
+        virtual_network_name="mera_vnet"
+        address_prefixes=["10.0.2.0/24"]
+
+    }
+}
+pipes={
+    pip1={
+        name="mera_pip"
+        resource_group_name="mera_rg"
+        location="centralindia"
+    }
+    pip2={
+        name="tera_pip"
+        resource_group_name="mera_rg"
+        location="centralindia"
+
+}
+}
+
+vms = {
+    vm1={
+        nic_name="mera_nic"
+        location="centralindia"
+        resource_group_name="mera_rg"
+        subnet_name="mera_subnet"
+        pip_name="mera_pip"
+        virtual_network_name="mera_vnet"
+        vm_name="mera-vm"
+        admin_username="Abhishek"
+        admin_password="Abhishek@12345"
+    }
+       vm2={
+        nic_name="tera_nic"
+        location="centralindia"
+        resource_group_name="mera_rg"
+        subnet_name="tera_subnet"
+        pip_name="tera_pip"
+        virtual_network_name="mera_vnet"
+        vm_name="tera-vm"
+        admin_username="Abhishek"
+        admin_password="Abhishek@12345"
+    }
+}
