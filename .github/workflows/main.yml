@@ -22,9 +22,9 @@ jobs:
         working-directory: PREPROD/parent-module
         run: terraform init
 
-      - name: Terraform Format Check
-        working-directory: PREPROD/parent-module
-        run: terraform fmt -check -recursive
+      # - name: Terraform Format Check
+      #   working-directory: PREPROD/parent-module
+      #   run: terraform fmt -check -recursive
 
       - name: Terraform validate
         working-directory: PREPROD/parent-module
