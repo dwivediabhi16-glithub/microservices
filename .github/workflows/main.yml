@@ -19,15 +19,19 @@ jobs:
         uses: hashicorp/setup-terraform@v2.0.3
 
       - name: terraform Init
+        working-directory: PREPROD/parent-module
         run: terraform init
 
       - name: Terraform Format Check
+        working-directory: PREPROD/parent-module
         run: terraform fmt -check -recursive
 
       - name: Terraform validate
+        working-directory: PREPROD/parent-module
         run: terraform validate
 
       - name: Terraform Plan
+        working-directory: PREPROD/parent-module
         run: terraform plan
     
         
